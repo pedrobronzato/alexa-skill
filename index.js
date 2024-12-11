@@ -1,9 +1,10 @@
-const express = require('express');
-const { exec } = require('child_process');
-require('dotenv').config();
+import express from 'express';
+import { exec } from 'child_process'
+import 'dotenv';
 
 const app = express();
 const port = 3000;
+app.use(express.json());
 
 app.post('/shutdown', (req, res) => {
 
